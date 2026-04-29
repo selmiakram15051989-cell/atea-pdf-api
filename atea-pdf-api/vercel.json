@@ -1,16 +1,5 @@
 {
-  "builds": [
-    {
-      "src": "api/transform.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/api/transform",
-      "dest": "api/transform.py"
-    }
-  ],
+  "version": 2,
   "headers": [
     {
       "source": "/api/(.*)",

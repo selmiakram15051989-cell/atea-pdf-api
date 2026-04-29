@@ -1,10 +1,16 @@
 {
-  "functions": {
-    "api/transform.py": {
-      "runtime": "python3.9",
-      "maxDuration": 60
+  "builds": [
+    {
+      "src": "api/transform.py",
+      "use": "@vercel/python"
     }
-  },
+  ],
+  "routes": [
+    {
+      "src": "/api/transform",
+      "dest": "api/transform.py"
+    }
+  ],
   "headers": [
     {
       "source": "/api/(.*)",
